@@ -7,6 +7,7 @@
 :root{
     --cor01: #ffffff;
     --cor02: #000000;
+    --cor03: #a9a9a9;
 
     --fonte-padrao: Verdana, Arial, Helvetica, sans-serif;
     --fonte-titulo: 'Passion One', serif;
@@ -18,8 +19,9 @@
     padding: 0px;
 }
 
-body {
-    background-color: var(--cor01);
+html, body {
+    min-height: 100vh;
+    background-color: var(--cor03);
     font: normal 1.2em var(--fonte-padrao);
 }
 
@@ -27,25 +29,50 @@ header {
     background-color: var(--cor02);
     color: var(--cor01);
 
-    padding: 40px;
     text-align: center;
 }
 
 header > h1 {
-    font: 7em var(--fonte-titulo);
+    padding-top: 50px;
+    font-variant: small-caps;
 }
 
-header a {
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
     color: var(--cor01);
+
+    font-weight: bolder;
     text-decoration: none;
 }
 
-header a:hover {
+header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
-main p {
-    font: var(--fonte-destaque);
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+
+    line-height: 2em;
+}
+
+section.normal {
+    background-color: var(--cor01);
+    color: var(--cor02);
+}
+
+section.imagem {
+    background-color: rgb(44, 44, 44);
+    color: var(--cor01);
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.247);
+    width: 400px;
 }
 
 footer {
@@ -53,17 +80,6 @@ footer {
     color: var(--cor01);
     font-size: 0.8em;
 
-    padding: 10px 0px;
+    padding: 10px;
     text-align: center;
-}
-
-footer a {
-    color: var(--cor01);
-
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
